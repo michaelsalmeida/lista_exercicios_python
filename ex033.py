@@ -1,0 +1,23 @@
+'''
+ Escreva um programa para aprovar ou não o empréstimo bancário para a compra 
+de uma casa. O programa vai perguntar o valor da casa, o salário do comprador e 
+em quantos anos ele vai pagar. Calcule o valor da prestação mensal, sabendo que 
+ela não pode exceder 30% do salário ou então o empréstimo será negado.
+'''
+
+from funcoes import *
+
+valorcasa = coringa('Valor da casa: ', float)
+salario = coringa('Salario que voce recebe: ', float)
+anos = coringa('Quantos anos irá pagar: ', int)
+
+
+prestacao = valorcasa / (anos * 12)
+
+limite = (valorcasa * 30) / 100
+
+if prestacao > limite:
+    print('Compra recusada')
+    
+else:
+    print('Compra aprovada') 
